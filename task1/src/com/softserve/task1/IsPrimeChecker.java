@@ -20,7 +20,6 @@ public class IsPrimeChecker extends Thread {
         this.primeList = primeList;
     }
 
-
     @Override
     public void run() {
         while (begin <= end){
@@ -87,5 +86,10 @@ public class IsPrimeChecker extends Thread {
         }
 
         System.out.println("List 2: "+ Arrays.toString(copies));
+    }
+
+    @Override
+    public String toString() {
+        return "Simple change";
     }
 }
