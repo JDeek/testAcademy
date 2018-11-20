@@ -1,0 +1,8 @@
+START TRANSACTION ;
+  UPDATE table_name SET field_1 = NULL WHERE id=5; /*Этот*/
+  DELETE FROM other_table WHERE id=17; /*И этот*/
+SAVEPOINT point_name;
+  DELETE FROM test_table WHERE id=75;
+ROLLBACK TO SAVEPOINT point_name;
+COMMIT ;
+
